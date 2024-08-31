@@ -3,6 +3,14 @@ import React from 'react';
 import { ThemeProvider } from 'styled-components';
 import { GlobalStyle } from '../src/styles/global';
 import { defaultTheme } from '../src/styles/themes/default';
+import '../src/assets/icons'
+import { library } from '@fortawesome/fontawesome-svg-core';
+import { fas } from '@fortawesome/free-solid-svg-icons';
+import { fab } from '@fortawesome/free-brands-svg-icons';
+import { far } from '@fortawesome/free-regular-svg-icons';
+
+library.add(fas, fab, far);
+
 
 const preview = {
   parameters: {
@@ -11,7 +19,7 @@ const preview = {
         color: /(background|color)$/i,
         date: /Date$/i,
       },
-      expanded: false, // Adiciona esta linha para não expandir as props em múltiplas linhas
+      expanded: false,
     },
   },
 

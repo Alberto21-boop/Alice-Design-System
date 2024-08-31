@@ -57,3 +57,8 @@ npm install --save-dev @types/styled-components --legacy-peer-deps
 npm install typescript@4.9.5 --save-dev
 npm install styled-components
 npm install --save-dev @types/styled-components
+
+Para instalar os icones ao projeto:
+npm install --save @fortawesome/fontawesome-svg-core @fortawesome/free-solid-svg-icons @fortawesome/react-fontawesome
+npm install @fortawesome/free-brands-svg-icons @fortawesome/free-regular-svg-icons
+
