@@ -4318,3 +4318,237 @@ export const TvAltIcon = Template.bind({});
 TvAltIcon.args = {
   icon: 'tv-alt',
 };
+
+export const UmbrellaIcon = Template.bind({});
+UmbrellaIcon.args = {
+  icon: 'umbrella',
+};
+
+export const UmbrellaBeachIcon = Template.bind({});
+UmbrellaBeachIcon.args = {
+  icon: 'umbrella-beach',
+};
+
+export const UnderlineIcon = Template.bind({});
+UnderlineIcon.args = {
+  icon: 'underline',
+};
+
+export const UndoIcon = Template.bind({});
+UndoIcon.args = {
+  icon: 'undo',
+};
+
+export const UndoAltIcon = Template.bind({});
+UndoAltIcon.args = {
+  icon: 'undo-alt',
+};
+
+export const UniversalAccessIcon = Template.bind({});
+UniversalAccessIcon.args = {
+  icon: 'universal-access',
+};
+
+
+export const UnlockAltIcon = Template.bind({});
+UnlockAltIcon.args = {
+  icon: 'unlock-alt',
+};
+
+export const UpDownIcon = Template.bind({});
+UpDownIcon.args = {
+  icon: 'up-down',
+};
+
+export const UpDownLeftRightIcon = Template.bind({});
+UpDownLeftRightIcon.args = {
+  icon: 'up-down-left-right',
+};
+
+export const UpLongIcon = Template.bind({});
+UpLongIcon.args = {
+  icon: 'up-long',
+};
+
+export const UpRightAndDownLeftFromCenterIcon = Template.bind({});
+UpRightAndDownLeftFromCenterIcon.args = {
+  icon: 'up-right-and-down-left-from-center',
+};
+
+export const UpRightFromSquareIcon = Template.bind({});
+UpRightFromSquareIcon.args = {
+  icon: 'up-right-from-square',
+};
+
+
+
+export const UserAltIcon = Template.bind({});
+UserAltIcon.args = {
+  icon: 'user-alt',
+};
+
+export const UserAltSlashIcon = Template.bind({});
+UserAltSlashIcon.args = {
+  icon: 'user-alt-slash',
+};
+
+export const UserAstronautIcon = Template.bind({});
+UserAstronautIcon.args = {
+  icon: 'user-astronaut',
+};
+
+export const UserCheckIcon = Template.bind({});
+UserCheckIcon.args = {
+  icon: 'user-check',
+};
+
+export const UserCircleIcon = Template.bind({});
+UserCircleIcon.args = {
+  icon: 'user-circle',
+};
+
+export const UserClockIcon = Template.bind({});
+UserClockIcon.args = {
+  icon: 'user-clock',
+};
+
+export const UserCogIcon = Template.bind({});
+UserCogIcon.args = {
+  icon: 'user-cog',
+};
+
+export const UserEditIcon = Template.bind({});
+UserEditIcon.args = {
+  icon: 'user-edit',
+};
+
+export const VanShuttleIcon = Template.bind({});
+VanShuttleIcon.args = {
+  icon: 'van-shuttle',
+};
+
+export const VaultIcon = Template.bind({});
+VaultIcon.args = {
+  icon: 'vault',
+};
+
+export const VectorSquareIcon = Template.bind({});
+VectorSquareIcon.args = {
+  icon: 'vector-square',
+};
+
+export const VenusIcon = Template.bind({});
+VenusIcon.args = {
+  icon: 'venus',
+};
+
+export const VenusDoubleIcon = Template.bind({});
+VenusDoubleIcon.args = {
+  icon: 'venus-double',
+};
+
+export const VenusMarsIcon = Template.bind({});
+VenusMarsIcon.args = {
+  icon: 'venus-mars',
+};
+
+export const VestIcon = Template.bind({});
+VestIcon.args = {
+  icon: 'vest',
+};
+
+export const VestPatchesIcon = Template.bind({});
+VestPatchesIcon.args = {
+  icon: 'vest-patches',
+};
+
+export const VialIcon = Template.bind({});
+VialIcon.args = {
+  icon: 'vial',
+};
+
+export const VialCircleCheckIcon = Template.bind({});
+VialCircleCheckIcon.args = {
+  icon: 'vial-circle-check',
+};
+
+export const VialVirusIcon = Template.bind({});
+VialVirusIcon.args = {
+  icon: 'vial-virus',
+};
+
+export const VialsIcon = Template.bind({});
+VialsIcon.args = {
+  icon: 'vials',
+};
+
+
+export const VideoSlashIcon = Template.bind({});
+VideoSlashIcon.args = {
+  icon: 'video-slash',
+};
+
+export const ViharaIcon = Template.bind({});
+ViharaIcon.args = {
+  icon: 'vihara',
+};
+
+export const VirusIcon = Template.bind({});
+VirusIcon.args = {
+  icon: 'virus',
+};
+
+export const VirusCovidIcon = Template.bind({});
+VirusCovidIcon.args = {
+  icon: 'virus-covid',
+};
+
+export const VirusCovidSlashIcon = Template.bind({});
+VirusCovidSlashIcon.args = {
+  icon: 'virus-covid-slash',
+};
+
+export const VirusSlashIcon = Template.bind({});
+VirusSlashIcon.args = {
+  icon: 'virus-slash',
+};
+
+export const VoicemailIcon = Template.bind({});
+VoicemailIcon.args = {
+  icon: 'voicemail',
+};
+
+export const VolcanoIcon = Template.bind({});
+VolcanoIcon.args = {
+  icon: 'volcano',
+};
+
+export const VrCardboardIcon = Template.bind({});
+VrCardboardIcon.args = {
+  icon: 'vr-cardboard',
+};
+
+export const XRayIcon = Template.bind({});
+XRayIcon.args = {
+  icon: 'x-ray',
+};
+
+export const XmarkIcon = Template.bind({});
+XmarkIcon.args = {
+  icon: 'xmark',
+};
+
+export const XmarkCircleIcon = Template.bind({});
+XmarkCircleIcon.args = {
+  icon: 'xmark-circle',
+};
+
+export const XmarkSquareIcon = Template.bind({});
+XmarkSquareIcon.args = {
+  icon: 'xmark-square',
+};
+
+export const ZIcon = Template.bind({});
+ZIcon.args = {
+  icon: 'z',
+};
