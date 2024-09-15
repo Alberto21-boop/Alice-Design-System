@@ -25,7 +25,7 @@ export const SidebarContainer = styled.div<{ isHidden: boolean }>`
   flex-direction: column;
   justify-content: flex-start;
   align-items: ${({ isHidden }) => (isHidden ? 'center' : 'flex-start')};
-  background-color: #fff;
+  background-color: ${(props) => props.theme.colors['base-sideBar']};
   padding: ${({ isHidden }) => (isHidden ? '10px' : '20px')};
   box-shadow: 2px 0px 5px rgba(0, 0, 0, 0.1);
   transition: width 0.3s ease;
@@ -42,7 +42,7 @@ export const SidebarButton = styled.button<{ isHidden: boolean; themeColor: Them
   height: 60px;
   padding-left: ${({ isHidden }) => (isHidden ? '0' : '20px')};
   margin-bottom: 8px;
-  background-color: #fff;
+  background-color: ${(props) => props.theme.colors['base-sideBar']};
   border: none;
   border-radius: 5px;
   cursor: pointer;
@@ -67,7 +67,7 @@ export const Separator = styled.hr`
   width: 100%;
   border: 0;
   height: 1px;
-  background: #000;
+  background: ${(props) => props.theme.colors['base-separator']};
   margin: 1px 0;
 `;
 
@@ -78,7 +78,7 @@ export const HideButton = styled.button<{ themeColor: ThemeColorOptions }>`
   display: flex;
   align-items: center;
   justify-content: space-between;
-  background-color: #fff;
+  background-color: ${(props) => props.theme.colors['base-sideBar']};
   padding: 0 20px;
   margin-bottom: 20px;
   border: none;
