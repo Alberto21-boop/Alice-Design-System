@@ -3,7 +3,7 @@ import { Meta, StoryFn } from '@storybook/react';
 import { AliButton } from './AliButton';
 
 export default {
-    title: 'AliButton',
+    title: 'Componentes/AliButton',
     component: AliButton,
     argTypes: {
         actionLevel: {

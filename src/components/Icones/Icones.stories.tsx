@@ -3,7 +3,7 @@ import { Meta, StoryFn } from '@storybook/react';
 import { FontAwesomeIcon } from '../../assets/icons';
 
 export default {
-  title: 'Icons',
+  title: 'Ícones/Icons',
   component: FontAwesomeIcon,
 } as Meta;
 

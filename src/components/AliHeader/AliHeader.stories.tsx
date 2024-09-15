@@ -4,7 +4,7 @@ import AliHeader from '.';
 
 
 export default {
-    title: 'AliHeader',
+    title: 'Componentes/AliHeader',
     component: AliHeader,
     argTypes: {
         themeColor: {

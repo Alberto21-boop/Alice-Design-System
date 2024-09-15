@@ -5,7 +5,7 @@ import React from 'react';
 
 
 export default {
-    title: 'AliIconButton',
+    title: 'Componentes/AliIconButton',
     component: AliIconButton,
     argTypes: {
         size: {

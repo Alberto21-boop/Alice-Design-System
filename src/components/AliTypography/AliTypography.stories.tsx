@@ -3,7 +3,7 @@ import { Meta, StoryFn } from '@storybook/react';
 import AliTypography from './AliTypography';
 
 export default {
-    title: 'AliTypography',
+    title: 'Componentes/AliTypography',
     component: AliTypography,
 } as Meta;
 
