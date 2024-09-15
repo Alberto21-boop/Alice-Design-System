@@ -2,33 +2,22 @@ import React from 'react';
 import { Meta, StoryFn } from '@storybook/react';
 import AliHeader from '.';
 
+
 export default {
     title: 'AliHeader',
     component: AliHeader,
     argTypes: {
         themeColor: {
-            control: { type: 'select' },
-            options: [
-                'blue',
-                'green',
-                'alert-red',
-                'gray-dark',
-                'purple',
-                'pink',
-                'yellow',
-                'orange',
-                'alice-blue',
-                'yellow-soft',
-                'yellow-bright',
-                'charcoal',
-                'slate',
-                'onyx',
-            ],
+            control: { type: 'select', options: ['blue', 'green', 'alert-red', 'gray-dark', 'purple', 'pink', 'yellow', 'orange', 'alice-blue', 'yellow-soft', 'yellow-bright', 'charcoal', 'slate', 'onyx'] },
+        },
+        children: {
+            control: 'text',
         },
     },
 } as Meta<typeof AliHeader>;
 
 const Template: StoryFn<typeof AliHeader> = (args) => <AliHeader {...args} />;
+
 
 export const Blue = Template.bind({});
 Blue.args = {

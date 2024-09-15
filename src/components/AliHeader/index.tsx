@@ -16,7 +16,7 @@ interface AliHeaderProps {
     | 'yellow-bright'
     | 'charcoal'
     | 'slate'
-    | 'onyx'
+    | 'onyx';
     children: React.ReactNode;
     className?: string;
 }
