@@ -50,6 +50,7 @@ type AliButtonProps = {
 
     size?: 'sm' | 'md' | 'lg';
     children: React.ReactNode;
+    className?: string;
     AliClick?: () => void;
 };
 
@@ -58,10 +59,11 @@ export const AliButton: React.FC<AliButtonProps> = ({
     actionLevel = 'primary-blue',
     size = 'md',
     children,
+    className,
     AliClick,
 }) => {
     return (
-        <AliButtonContainer type={type} actionLevel={actionLevel} size={size} onClick={AliClick}>
+        <AliButtonContainer type={type} actionLevel={actionLevel} size={size} className-={className} onClick={AliClick}>
             {children}
         </AliButtonContainer>
     );

@@ -18,11 +18,12 @@ interface AliHeaderProps {
     | 'slate'
     | 'onyx'
     children: React.ReactNode;
+    className?: string;
 }
 
-const AliHeader: React.FC<AliHeaderProps> = ({ themeColor, children }) => {
+const AliHeader: React.FC<AliHeaderProps> = ({ themeColor, children, className }) => {
     return (
-        <AliHeaderContainer themeColor={themeColor}>
+        <AliHeaderContainer themeColor={themeColor} className={className}>
             {children}
         </AliHeaderContainer>
     );
