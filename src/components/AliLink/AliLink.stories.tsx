@@ -18,6 +18,9 @@ export default {
         },
         isSecondary: {
             control: 'boolean', // Controle para o estilo secundário
+        },
+        isTertiary: {
+            control: 'boolean', // Certifique-se de que o controle terciário está configurado como booleano
         }
     }
 } as Meta<AliLinkProps>; // Certifique-se de que o Meta está tipado corretamente
@@ -32,13 +35,24 @@ DefaultLink.args = {
     children: 'Link Example',
     themeColor: 'blue',
     isSecondary: false, // Estilo padrão
+    isTertiary: false,
 };
 
 // História secundária com animação de piscar
 export const SecondaryLink = Template.bind({});
 SecondaryLink.args = {
     href: '#',
-    children: 'Secondary Blinking Link',
+    children: 'Secondary Link',
     themeColor: 'green',
     isSecondary: true, // Estilo com animação de piscar
+    isTertiary: false,
+};
+
+export const TertiaryLink = Template.bind({});
+TertiaryLink.args = {
+    href: '#',
+    children: 'Tertiary Link',
+    themeColor: 'purple',
+    isSecondary: false,
+    isTertiary: true, // Estilo com piscar e vibrar
 };

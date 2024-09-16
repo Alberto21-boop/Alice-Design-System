@@ -19,35 +19,42 @@ type ThemeColorOptions =
 
 // Animação de piscar
 const blink = keyframes`
-  0% {
-    opacity: 1;
-  }
-  50% {
-    opacity: 0.5;
-  }
-  100% {
-    opacity: 1;
-  }
+  0% { opacity: 1; }
+  50% { opacity: 0.5; }
+  100% { opacity: 1; }
 `;
 
 // Estilo do link
-export const StyledLink = styled.a<{ themeColor: ThemeColorOptions; isSecondary?: boolean }>`
+export const StyledLink = styled.a<{ $themeColor: ThemeColorOptions; $isSecondary?: boolean; $isTertiary?: boolean }>`
   text-decoration: none;
-  color: ${({ theme, themeColor }) => theme.colors[`brand-${themeColor}`]};
+  color: ${({ theme, $themeColor }) => theme.colors[`brand-${$themeColor}`]};
   font-weight: bold;
   transition: color 0.3s ease;
 
-  /* Aplica animação se o link for secundário */
-  ${({ isSecondary }) =>
-        isSecondary &&
+  // Estilo secundário (pisca continuamente)
+  ${({ $isSecondary }) =>
+        $isSecondary &&
         css`
       animation: ${blink} 1s infinite;
     `}
 
+  // Estilo terciário (estático por padrão, sem animação)
+  ${({ $isTertiary }) =>
+        $isTertiary &&
+        css`
+      // Sem animação no estado padrão, permanece estático
+    `}
+
   &:hover {
-    /* Verifica se existe a cor de hover, caso contrário, usa a cor principal */
-    color: ${({ theme, themeColor }) =>
-        theme.colors[`brand-${themeColor}-hover`] || theme.colors[`brand-${themeColor}`]};
+    color: ${({ theme, $themeColor }) =>
+        theme.colors[`brand-${$themeColor}-hover`] || theme.colors[`brand-${$themeColor}`]};
     text-decoration: underline;
+
+    // Se for terciário, ao passar o mouse ele começa a piscar
+    ${({ $isTertiary }) =>
+        $isTertiary &&
+        css`
+        animation: ${blink} 1s infinite;
+      `}
   }
 `;
