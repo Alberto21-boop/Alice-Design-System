@@ -3,6 +3,20 @@ export const defaultTheme = {
         "base-white": "#FFFFFF",
         "base-tab": "#ddd",
         "base-tab-hover-secondary": "#f0f0f0",
+        "brand-blue-hover": "#0000CC",  // Adicionada
+        "brand-green-hover": "#00CC00",  // Adicionada
+        "brand-alert-red-hover": "#CC0000",  // Adicionada
+        "brand-gray-dark-hover": "#333333",  // Adicionada
+        "brand-purple-hover": "#9933CC",  // Adicionada
+        "brand-pink-hover": "#FF77AA",  // Adicionada
+        "brand-yellow-hover": "#FFD700",  // Adicionada
+        "brand-orange-hover": "#FFAA33",  // Adicionada
+        "brand-alice-blue-hover": "#E0F7FF",  // Adicionada
+        "brand-yellow-soft-hover": "#F9E5A9",  // Adicionada
+        "brand-yellow-bright-hover": "#FFF700",  // Adicionada
+        "brand-charcoal-hover": "#333333",  // Adicionada
+        "brand-slate-hover": "#444444",  // Adicionada
+        "brand-onyx-hover": "#555555",  // Adicionada
         "base-sideBar": "#fff",
         "base-background": "#FAFAFA",
         "base-separator": "#000",
