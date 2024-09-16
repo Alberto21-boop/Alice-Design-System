@@ -2,26 +2,26 @@ import styled from 'styled-components';
 
 // Definir as cores possíveis para o themeColor
 type ThemeColorOptions =
-    | 'blue'
-    | 'green'
-    | 'alert-red'
-    | 'gray-dark'
-    | 'purple'
-    | 'pink'
-    | 'yellow'
-    | 'orange'
-    | 'alice-blue'
-    | 'yellow-soft'
-    | 'yellow-bright'
-    | 'charcoal'
-    | 'slate'
-    | 'onyx';
+  | 'blue'
+  | 'green'
+  | 'alert-red'
+  | 'gray-dark'
+  | 'purple'
+  | 'pink'
+  | 'yellow'
+  | 'orange'
+  | 'alice-blue'
+  | 'yellow-soft'
+  | 'yellow-bright'
+  | 'charcoal'
+  | 'slate'
+  | 'onyx';
 
 // Container das abas
 export const AliTabsContainer = styled.div`
   display: flex;
   width: 100%;
-  background-color: #fff; /* Fundo branco */
+  background-color: ${(props) => props.theme.colors['base-sideBar']}; /* Fundo branco */
   border-radius: 5px;
   overflow: hidden;
 `;
@@ -31,9 +31,9 @@ export const TabButton = styled.button<{ isActive: boolean; themeColor: ThemeCol
   padding: 10px 15px; /* Padding ajustado para o texto */
   min-width: 100px; /* Define uma largura mínima */
   background-color: ${({ isActive, theme, themeColor }) =>
-        isActive ? theme.colors[`brand-${themeColor}` as keyof typeof theme.colors] : '#fff'};
+    isActive ? theme.colors[`brand-${themeColor}` as keyof typeof theme.colors] : '#base-sideBar'};
   color: ${({ isActive, theme }) =>
-        isActive ? theme.colors['base-white'] : theme.colors['base-text']};
+    isActive ? theme.colors['base-white'] : theme.colors['base-text']};
   border: none;
   cursor: pointer;
   transition: background-color 0.3s, border-radius 0.3s;
@@ -58,7 +58,7 @@ export const TabButton = styled.button<{ isActive: boolean; themeColor: ThemeCol
 // Estilo do conteúdo das abas
 export const TabContent = styled.div`
   padding: 20px;
-  background-color: #fff;
-  border-top: 1px solid #ddd;
+  background-color: ${(props) => props.theme.colors['base-sideBar']};
+  border-top: 1px solid ${(props) => props.theme.colors['base-tab']};
   flex: 1;
 `;
