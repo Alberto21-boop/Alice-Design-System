@@ -26,12 +26,12 @@ export const AliTabsContainer = styled.div`
   overflow: hidden;
 `;
 
-// Estilo das abas (tab) individuais
-export const TabButton = styled.button<{ isActive: boolean; themeColor: ThemeColorOptions }>`
+// Estilo das abas (tab) individuais - Primary
+export const PrimaryTabButton = styled.button<{ isActive: boolean; themeColor: ThemeColorOptions }>`
   padding: 10px 15px; /* Padding ajustado para o texto */
   min-width: 100px; /* Define uma largura mínima */
   background-color: ${({ isActive, theme, themeColor }) =>
-    isActive ? theme.colors[`brand-${themeColor}` as keyof typeof theme.colors] : '#base-sideBar'};
+    isActive ? theme.colors[`brand-${themeColor}` as keyof typeof theme.colors] : theme.colors['base-sideBar']};
   color: ${({ isActive, theme }) =>
     isActive ? theme.colors['base-white'] : theme.colors['base-text']};
   border: none;
@@ -46,6 +46,38 @@ export const TabButton = styled.button<{ isActive: boolean; themeColor: ThemeCol
     color: white;
     border-radius: 5px; /* Aplica o border-radius no hover */
   }
+
+  &:not(:last-child) {
+    margin-right: 5px;
+  }
+
+  /* Faz com que a largura se adapte ao conteúdo */
+  white-space: nowrap;
+`;
+
+// Estilo das abas (tab) individuais - Secondary
+export const SecondaryTabButton = styled.button<{ isActive: boolean; themeColor: ThemeColorOptions }>`
+  padding: 10px 15px;
+  min-width: 100px;
+  background-color: transparent;
+  color: ${({ isActive, theme, themeColor }) =>
+    isActive ? theme.colors[`brand-${themeColor}` as keyof typeof theme.colors] : theme.colors['base-text']};
+  border: none;
+  cursor: pointer;
+  transition: color 0.3s;
+
+  &:hover {
+    background-color: ${(props) => props.theme.colors['base-tab-hover-secondary']}; /* Hover cinza claro */
+    border-radius: 5px;
+  }
+
+  /* Aplica o estilo quando a aba está ativa */
+  ${({ isActive, themeColor, theme }) =>
+    isActive &&
+    `
+    color: ${theme.colors[`brand-${themeColor}` as keyof typeof theme.colors]};
+    border-bottom: 2px solid ${theme.colors[`brand-${themeColor}` as keyof typeof theme.colors]};
+  `}
 
   &:not(:last-child) {
     margin-right: 5px;

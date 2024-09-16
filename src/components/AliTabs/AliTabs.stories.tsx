@@ -11,12 +11,17 @@ export default {
                 type: 'select',
                 options: [
                     'blue', 'green', 'alert-red', 'gray-dark', 'purple', 'pink', 'yellow', 'orange',
-                    'alice-blue', 'yellow-soft', 'yellow-bright', 'charcoal', 'slate', 'onyx',
-                ],
-            },
-            defaultValue: 'blue',
+                    'alice-blue', 'yellow-soft', 'yellow-bright', 'charcoal', 'slate', 'onyx'
+                ]
+            }
         },
-    },
+        variant: {
+            control: {
+                type: 'select',
+                options: ['primary', 'secondary'] // Adicionando a opção de variante
+            }
+        }
+    }
 } as Meta;
 
 const Template: StoryFn<typeof AliTabs> = (args) => <AliTabs {...args} />;
@@ -31,4 +36,5 @@ DefaultTabs.args = {
         { label: 'Tab 5', content: 'Content for Tab 5' },
     ],
     themeColor: 'blue',
+    variant: 'primary'  // Pode ser 'primary' ou 'secondary'
 };

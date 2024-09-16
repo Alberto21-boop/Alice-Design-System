@@ -2,6 +2,7 @@ export const defaultTheme = {
     colors: {
         "base-white": "#FFFFFF",
         "base-tab": "#ddd",
+        "base-tab-hover-secondary": "#f0f0f0",
         "base-sideBar": "#fff",
         "base-background": "#FAFAFA",
         "base-separator": "#000",

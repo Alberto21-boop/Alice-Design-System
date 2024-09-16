@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { AliTabsContainer, TabButton, TabContent } from './styles';
+import { AliTabsContainer, PrimaryTabButton, SecondaryTabButton, TabContent } from './styles';
 
 interface Tab {
     label: string;
@@ -9,23 +9,35 @@ interface Tab {
 interface AliTabsProps {
     tabs: Tab[];
     themeColor: 'blue' | 'green' | 'alert-red' | 'gray-dark' | 'purple' | 'pink' | 'yellow' | 'orange' | 'alice-blue' | 'yellow-soft' | 'yellow-bright' | 'charcoal' | 'slate' | 'onyx';
+    variant?: 'primary' | 'secondary';  // Adicionando a opção de variante
 }
 
-const AliTabs: React.FC<AliTabsProps> = ({ tabs, themeColor }) => {
+const AliTabs: React.FC<AliTabsProps> = ({ tabs, themeColor, variant = 'primary' }) => {
     const [activeTab, setActiveTab] = useState(0);
 
     return (
         <div>
             <AliTabsContainer>
                 {tabs.map((tab, index) => (
-                    <TabButton
-                        key={index}
-                        isActive={activeTab === index}
-                        themeColor={themeColor}
-                        onClick={() => setActiveTab(index)}
-                    >
-                        {tab.label}
-                    </TabButton>
+                    variant === 'primary' ? (
+                        <PrimaryTabButton
+                            key={index}
+                            isActive={activeTab === index}
+                            themeColor={themeColor}
+                            onClick={() => setActiveTab(index)}
+                        >
+                            {tab.label}
+                        </PrimaryTabButton>
+                    ) : (
+                        <SecondaryTabButton
+                            key={index}
+                            isActive={activeTab === index}
+                            themeColor={themeColor}
+                            onClick={() => setActiveTab(index)}
+                        >
+                            {tab.label}
+                        </SecondaryTabButton>
+                    )
                 ))}
             </AliTabsContainer>
 
