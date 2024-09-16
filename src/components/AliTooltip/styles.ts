@@ -9,7 +9,8 @@ export const TooltipWrapper = styled.div`
 // Estilo do tooltip em si
 export const TooltipBox = styled.div<{ position: 'top' | 'bottom' | 'left' | 'right' }>`
   position: absolute;
-  background-color: #333;
+  background-color: ${(props) => props.theme.colors['brand-gray-dark']};
+  color: ${(props) => props.theme.colors['base-white']};
   color: white;
   padding: 8px;
   border-radius: 4px;

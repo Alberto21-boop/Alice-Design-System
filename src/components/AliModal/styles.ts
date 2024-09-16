@@ -8,7 +8,7 @@ export const ModalWrapper = styled.div<{ isOpen: boolean }>`
   left: 0;
   width: 100vw;
   height: 100vh;
-  background: rgba(0, 0, 0, 0.5); /* Fundo escuro com opacidade */
+  background: ${(props) => props.theme.colors['brand-gray-black']}80; /* Fundo escuro com opacidade */
   justify-content: center;
   align-items: center;
   z-index: 999;
@@ -28,7 +28,7 @@ export const ModalContent = styled.div<{ size: 'small' | 'medium' | 'large' }>`
   height: ${({ size }) =>
         size === 'small' ? '300px' : size === 'medium' ? '500px' : '800px'}; /* Altura ajustada */
   overflow-y: auto;
-  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Sombra mais pronunciada */
+  box-shadow: 0 8px 16px ${(props) => props.theme.colors['brand-gray-dark']}33; /* Sombra mais pronunciada */
   transition: transform 0.3s ease; /* Suaviza a entrada */
   transform: ${({ size }) => (size ? 'scale(1)' : 'scale(0.95)')}; /* Animação de entrada */
 
@@ -55,9 +55,9 @@ export const CloseButton = styled.button`
   border: none;
   font-size: 1.5rem;
   cursor: pointer;
-  color: #333; /* Cor do X (pode ser ajustada conforme o tema) */
+  color: ${(props) => props.theme.colors['brand-gray-dark']};
 
   &:hover {
-    color: #000; /* Mudança de cor ao passar o mouse */
+    color: ${(props) => props.theme.colors['brand-gray-black']};
   }
 `;
