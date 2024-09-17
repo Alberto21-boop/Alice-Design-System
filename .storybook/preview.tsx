@@ -3,14 +3,13 @@ import React from 'react';
 import { ThemeProvider } from 'styled-components';
 import { GlobalStyle } from '../src/styles/global';
 import { defaultTheme } from '../src/styles/themes/default';
-import '../src/assets/icons'
+import '../src/assets/icons';
 import { library } from '@fortawesome/fontawesome-svg-core';
 import { fas } from '@fortawesome/free-solid-svg-icons';
 import { fab } from '@fortawesome/free-brands-svg-icons';
 import { far } from '@fortawesome/free-regular-svg-icons';
 
 library.add(fas, fab, far);
-
 
 const preview = {
   parameters: {
@@ -20,6 +19,14 @@ const preview = {
         date: /Date$/i,
       },
       expanded: false,
+    },
+    docs: {
+      toc: true, // Ativa o índice na documentação
+    },
+    options: {
+      storySort: {
+        order: ['Introdução', 'Componentes'], // Define a ordem no menu
+      },
     },
   },
 
@@ -32,7 +39,7 @@ const preview = {
     ),
   ],
 
-  tags: ["autodocs"]
+  tags: ["autodocs"],
 };
 
 export default preview;

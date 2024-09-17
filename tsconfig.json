@@ -1,30 +1,28 @@
 {
   "compilerOptions": {
-    "jsx": "react-jsx", // ou "react" para versões anteriores ao React 17
-    "target": "ES5",
-    "lib": [
-      "dom",
-      "dom.iterable",
-      "esnext"
-    ],
-    "allowJs": true,
-    "skipLibCheck": true,
-    "esModuleInterop": true,
-    "allowSyntheticDefaultImports": true,
-    "strict": true,
-    "forceConsistentCasingInFileNames": true,
-    "noFallthroughCasesInSwitch": true,
-    "module": "ESNext",
-    "moduleResolution": "node",
-    "resolveJsonModule": true,
-    "isolatedModules": true,
-    "baseUrl": "./src",
+    "jsx": "react-jsx", // Para React com JSX
+    "target": "ES6", // Usar ECMAScript 6 ou superior
+    "module": "commonjs", // Usar módulos CommonJS (import/export para Node.js)
+    "moduleResolution": "node", // Resolver módulos no estilo Node.js
+    "esModuleInterop": true, // Interoperabilidade entre ES Modules e CommonJS
+    "allowJs": true, // Permitir arquivos JavaScript
+    "skipLibCheck": true, // Ignorar checagem de bibliotecas de tipos para maior rapidez
+    "allowSyntheticDefaultImports": true, // Permitir importações padrão sintéticas
+    "strict": true, // Ativar verificação estrita
+    "forceConsistentCasingInFileNames": true, // Forçar consistência no uso de maiúsculas e minúsculas nos nomes de arquivos
+    "noFallthroughCasesInSwitch": true, // Prevenir queda entre casos em switch
+    "resolveJsonModule": true, // Permitir importação de JSON
+    "isolatedModules": true, // Tratar cada arquivo como um módulo independente
+    "baseUrl": "./src", // Diretório base para resolução de módulos
     "typeRoots": [
-      "./src/@types",
-      "./node_modules/@types"
-    ]
+      "./src/@types", // Diretório de definições de tipos personalizadas
+      "./node_modules/@types" // Diretório de definições de tipos instaladas
+    ],
+    "types": [
+      "node"
+    ] // Adicionar definições de tipo do Node.js
   },
   "include": [
-    "src"
+    "src" // Incluir todos os arquivos dentro da pasta 'src'
   ]
 }

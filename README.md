@@ -62,3 +62,5 @@ Para instalar os icones ao projeto:
 npm install --save @fortawesome/fontawesome-svg-core @fortawesome/free-solid-svg-icons @fortawesome/react-fontawesome
 npm install @fortawesome/free-brands-svg-icons @fortawesome/free-regular-svg-icons
 
+Depois para documentarmos o oprojeto de maneira que a documentação apareça na interface do storybook, iremos instalar o seguinte pacote
+npm install @storybook/addon-docs --save-dev
