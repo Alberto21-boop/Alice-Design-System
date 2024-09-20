@@ -26,6 +26,9 @@ const config: StorybookConfig = {
 
   typescript: {
     reactDocgen: "react-docgen-typescript"
-  }
+  },
+  webpackFinal: async (config, { configType }) => {
+    return config;
+  },
 };
 export default config;

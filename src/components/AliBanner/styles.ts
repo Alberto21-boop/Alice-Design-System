@@ -1,21 +1,21 @@
 import styled from 'styled-components';
 
 export const BannerContainer = styled.div<{
-    themeColor:
-    | 'blue'
-    | 'green'
-    | 'alert-red'
-    | 'gray-dark'
-    | 'purple'
-    | 'pink'
-    | 'yellow'
-    | 'orange'
-    | 'alice-blue'
-    | 'yellow-soft'
-    | 'yellow-bright'
-    | 'charcoal'
-    | 'slate'
-    | 'onyx'
+  themeColor:
+  | 'blue'
+  | 'green'
+  | 'alert-red'
+  | 'gray-dark'
+  | 'purple'
+  | 'pink'
+  | 'yellow'
+  | 'orange'
+  | 'alice-blue'
+  | 'yellow-soft'
+  | 'yellow-bright'
+  | 'charcoal'
+  | 'slate'
+  | 'onyx'
 }>`
   display: flex;
   align-items: center;
@@ -60,7 +60,7 @@ export const CloseButton = styled.button`
   font-size: 20px;
   cursor: pointer;
   position: absolute;
-  top: 0px; /* Desci o botão apenas 1 pixel */
-  right: 5px; /* Movei o botão um pouquinho mais para a direita */
+  top: 0px; 
+  right: 5px; 
 `;
 
