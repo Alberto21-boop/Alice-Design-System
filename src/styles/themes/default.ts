@@ -1,5 +1,6 @@
 export const defaultTheme = {
     colors: {
+        "base-border": "#cccccc",
         "base-white": "#FFFFFF",
         "base-tab": "#ddd",
         "base-tab-hover-secondary": "#f0f0f0",
