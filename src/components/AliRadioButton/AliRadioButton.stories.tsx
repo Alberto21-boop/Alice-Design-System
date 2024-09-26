@@ -27,8 +27,6 @@ const Template: StoryFn<typeof AliRadioButton> = (args) => {
     return <AliRadioButton {...args} checked={selected === args.value} onChange={handleChange} />;
 };
 
-
-
 // Exemplo para Default RadioButton
 export const Default = Template.bind({});
 Default.args = {
