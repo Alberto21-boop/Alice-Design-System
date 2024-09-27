@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { AccordionContainer, AccordionHeader, AccordionContent, AccordionIcon } from './styles';
+import { AccordionContainer, AccordionContent, AccordionIcon, AccordionTitle } from './styles';
 
 interface AliAccordionProps {
     themeColor:
@@ -18,10 +18,11 @@ interface AliAccordionProps {
     | 'slate'
     | 'onyx';
     title: string;
+    className?: string;
     children: React.ReactNode;
 }
 
-const AliAccordion: React.FC<AliAccordionProps> = ({ themeColor, title, children }) => {
+const AliAccordion: React.FC<AliAccordionProps> = ({ themeColor, title, children, className }) => {
     const [isOpen, setIsOpen] = useState(false);
 
     const toggleAccordion = () => {
@@ -29,11 +30,11 @@ const AliAccordion: React.FC<AliAccordionProps> = ({ themeColor, title, children
     };
 
     return (
-        <AccordionContainer>
-            <AccordionHeader themeColor={themeColor} isOpen={isOpen} onClick={toggleAccordion}>
+        <AccordionContainer className={className}>
+            <AccordionTitle themeColor={themeColor} isOpen={isOpen} onClick={toggleAccordion}>
                 <span>{title}</span>
-                <AccordionIcon isOpen={isOpen}>▼</AccordionIcon> {/* Ícone de dropdown */}
-            </AccordionHeader>
+                <AccordionIcon isOpen={isOpen} themeColor={themeColor}>▼</AccordionIcon> {/* Agora passando themeColor */}
+            </AccordionTitle>
             {isOpen && <AccordionContent>{children}</AccordionContent>}
         </AccordionContainer>
     );
