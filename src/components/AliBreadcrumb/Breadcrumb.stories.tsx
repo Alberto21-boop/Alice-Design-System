@@ -3,7 +3,7 @@ import { Meta, StoryFn } from '@storybook/react';
 import Breadcrumb from './index';
 
 export default {
-    title: 'Components/Breadcrumb',
+    title: 'Componentes/Breadcrumb',
     component: Breadcrumb,
     argTypes: {
         themeColor: {
