@@ -1,10 +1,10 @@
 import React from 'react';
 import { Meta, StoryFn } from '@storybook/react';
-import Breadcrumb from './index';
+import AliBreadcrumb from './index';
 
 export default {
-    title: 'Componentes/Breadcrumb',
-    component: Breadcrumb,
+    title: 'Componentes/AliBreadcrumb',
+    component: AliBreadcrumb,
     argTypes: {
         themeColor: {
             control: {
@@ -19,7 +19,7 @@ export default {
     },
 } as Meta;
 
-const Template: StoryFn<typeof Breadcrumb> = (args) => <Breadcrumb {...args} />;
+const Template: StoryFn<typeof AliBreadcrumb> = (args) => <AliBreadcrumb {...args} />;
 
 export const Default = Template.bind({});
 Default.args = {
@@ -45,7 +45,7 @@ export const AllColors = () => (
     <div>
         {colors.map((color) => (
             <div key={color} style={{ marginBottom: '10px' }}>
-                <Breadcrumb
+                <AliBreadcrumb
                     items={[
                         { name: 'Home', url: '/' },
                         { name: 'Products', url: '/products' },

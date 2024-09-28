@@ -29,6 +29,7 @@ export const defaultTheme = {
         "base-label": "#8D8686",
         "base-text": "#574F4D",
         "base-subtitle": "#403937",
+        "base-breadCrumb": "#6c757d",
         "base-title": "#272221",
         "base-error": "#f84747",
         "brand-purple-dark": "#4B2995",

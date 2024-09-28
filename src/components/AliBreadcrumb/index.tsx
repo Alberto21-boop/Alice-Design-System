@@ -1,14 +1,16 @@
 import React from 'react';
 import { BreadcrumbContainer, BreadcrumbItem, Separator } from './styles';
 
-interface BreadcrumbItemProps {
+interface AliBreadcrumbItemProps {
     name: string;
     url?: string;
+    className?: string;
 }
 
-interface BreadcrumbProps {
-    items: BreadcrumbItemProps[];
+interface AliBreadcrumbProps {
+    items: AliBreadcrumbItemProps[];
     separator?: string;
+    className?: string;
     onNavigate?: (url: string) => void;
     themeColor:
     | 'blue'
@@ -27,8 +29,9 @@ interface BreadcrumbProps {
     | 'onyx';
 }
 
-const Breadcrumb: React.FC<BreadcrumbProps> = ({
+const AliBreadcrumb: React.FC<AliBreadcrumbProps> = ({
     items,
+    className,
     separator = '>',
     onNavigate,
     themeColor,
@@ -40,7 +43,7 @@ const Breadcrumb: React.FC<BreadcrumbProps> = ({
     };
 
     return (
-        <BreadcrumbContainer aria-label="breadcrumb">
+        <BreadcrumbContainer className={className} aria-label="breadcrumb">
             {items.map((item, index) => (
                 <React.Fragment key={index}>
                     <BreadcrumbItem
@@ -57,4 +60,4 @@ const Breadcrumb: React.FC<BreadcrumbProps> = ({
     );
 };
 
-export default Breadcrumb;
+export default AliBreadcrumb;

@@ -7,28 +7,28 @@ export const BreadcrumbContainer = styled.nav`
 `;
 
 interface BreadcrumbItemProps {
-    isCurrent?: boolean;
-    themeColor:
-    | 'blue'
-    | 'green'
-    | 'alert-red'
-    | 'gray-dark'
-    | 'purple'
-    | 'pink'
-    | 'yellow'
-    | 'orange'
-    | 'alice-blue'
-    | 'yellow-soft'
-    | 'yellow-bright'
-    | 'charcoal'
-    | 'slate'
-    | 'onyx';
+  isCurrent?: boolean;
+  themeColor:
+  | 'blue'
+  | 'green'
+  | 'alert-red'
+  | 'gray-dark'
+  | 'purple'
+  | 'pink'
+  | 'yellow'
+  | 'orange'
+  | 'alice-blue'
+  | 'yellow-soft'
+  | 'yellow-bright'
+  | 'charcoal'
+  | 'slate'
+  | 'onyx';
 }
 
 export const BreadcrumbItem = styled.span<BreadcrumbItemProps>`
   display: inline;
   color: ${({ theme, isCurrent, themeColor }) =>
-        isCurrent ? '#000' : theme.colors[`brand-${themeColor}`]};
+    isCurrent ? 'base-separator' : theme.colors[`brand-${themeColor}`]};
   text-decoration: ${({ isCurrent }) => (isCurrent ? 'none' : 'underline')};
   cursor: ${({ isCurrent }) => (isCurrent ? 'default' : 'pointer')};
 
@@ -40,5 +40,5 @@ export const BreadcrumbItem = styled.span<BreadcrumbItemProps>`
 
 export const Separator = styled.span`
   margin: 0 8px;
-  color: #6c757d;
+  color: ${(porps => porps.theme.colors['base-breadCrumb'])};
 `;

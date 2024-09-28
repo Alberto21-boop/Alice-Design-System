@@ -13,15 +13,16 @@ interface AliBannerProps {
     text: string;
     themeColor: 'blue' | 'green' | 'alert-red' | 'gray-dark' | 'purple' | 'pink' | 'yellow' | 'orange' | 'alice-blue' | 'yellow-soft' | 'yellow-bright' | 'charcoal' | 'slate' | 'onyx'; // Definir o tipo explicitamente
     imageUrl?: string;  // Imagem é opcional
+    className?: string;
 }
 
-const AliBanner: React.FC<AliBannerProps> = ({ text, themeColor, imageUrl }) => {
+const AliBanner: React.FC<AliBannerProps> = ({ className, text, themeColor, imageUrl }) => {
     const [isVisible, setIsVisible] = useState(true);
 
     if (!isVisible) return null;
 
     return (
-        <BannerContainer themeColor={themeColor}>
+        <BannerContainer className={className} themeColor={themeColor}>
             <BannerContent>
                 <BannerText>{text}</BannerText>
             </BannerContent>
