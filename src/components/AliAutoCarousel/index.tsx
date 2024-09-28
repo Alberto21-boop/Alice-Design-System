@@ -5,9 +5,10 @@ interface AliAutoCarouselProps {
     images: string[];
     interval?: number;
     bgColor?: string;
+    className?: string;
 }
 
-const AliAutoCarousel: React.FC<AliAutoCarouselProps> = ({ images, interval = 3000, bgColor }) => {
+const AliAutoCarousel: React.FC<AliAutoCarouselProps> = ({ images, className, interval = 3000, bgColor }) => {
     const [currentIndex, setCurrentIndex] = useState(0);
 
     useEffect(() => {
@@ -24,6 +25,7 @@ const AliAutoCarousel: React.FC<AliAutoCarouselProps> = ({ images, interval = 30
                 <CarouselSlide
                     key={index}
                     bgColor={bgColor}
+                    className={className}
                     style={{ transform: `translateX(-${currentIndex * 100}%)` }}
                 >
                     <CarouselImage src={image} alt={`Slide ${index}`} />

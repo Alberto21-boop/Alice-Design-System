@@ -3,6 +3,7 @@ export const defaultTheme = {
         "base-border": "#cccccc",
         "base-white": "#FFFFFF",
         "base-tab": "#ddd",
+        "base-color": "#ccc",
         "base-tab-hover-secondary": "#f0f0f0",
         "brand-blue-hover": "#0000CC",  // Adicionada
         "brand-green-hover": "#00CC00",  // Adicionada

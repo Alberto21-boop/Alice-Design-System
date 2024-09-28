@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 
 interface CarouselSlideProps {
-    bgColor?: string;
+  bgColor?: string;
 }
 
 export const CarouselContainer = styled.div`
@@ -20,8 +20,8 @@ export const CarouselSlide = styled.div<CarouselSlideProps>`
   justify-content: center;
   height: 100%;
   background-color: ${({ theme, bgColor }) =>
-        theme.colors[bgColor as keyof typeof theme.colors] || bgColor || '#ccc'}; 
-  /* Usando fallback para #ccc caso a cor não seja encontrada */
+    theme.colors[bgColor as keyof typeof theme.colors] || bgColor || '#base-color'}; 
+  /* Usando fallback para base-color caso a cor não seja encontrada */
 `;
 
 export const CarouselImage = styled.img`
