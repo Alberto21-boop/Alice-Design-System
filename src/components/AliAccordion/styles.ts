@@ -61,7 +61,7 @@ export const AccordionIcon = styled.span<AccordionIconProps>`
   transition: transform 0.3s ease, color 0.3s ease;
   transform: ${({ isOpen }) => (isOpen ? 'rotate(180deg)' : 'rotate(0deg)')};
   color: ${({ theme, themeColor, isOpen }) => {
-    const hoverColor = theme.colors[`brand-${themeColor}-hover` as keyof typeof theme.colors];
+    const hoverColor = theme.colors[`brand-${themeColor}` as keyof typeof theme.colors];
     const defaultColor = theme.colors[`brand-${themeColor}` as keyof typeof theme.colors];
 
     return isOpen ? hoverColor ?? themeColor : defaultColor ?? themeColor;
