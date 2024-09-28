@@ -6,6 +6,7 @@ interface AliAvatarProps {
     alt?: string; // Texto alternativo para a imagem
     name: string; // Nome do usuário, usado para gerar as iniciais
     size?: 'small' | 'medium' | 'large'; // Tamanhos do avatar
+    className?: string;
 }
 
 const getInitials = (name: string): string => {
@@ -14,9 +15,9 @@ const getInitials = (name: string): string => {
     return initials.slice(0, 2); // Retorna as duas primeiras iniciais
 };
 
-const AliAvatar: React.FC<AliAvatarProps> = ({ src, alt, name, size = 'medium' }) => {
+const AliAvatar: React.FC<AliAvatarProps> = ({ className, src, alt, name, size = 'medium' }) => {
     return (
-        <AvatarContainer size={size}>
+        <AvatarContainer className={className} size={size}>
             {src ? <AvatarImage src={src} alt={alt || name} /> : getInitials(name)}
         </AvatarContainer>
     );
