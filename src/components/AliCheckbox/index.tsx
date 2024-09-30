@@ -4,6 +4,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { iconsMap } from '../../assets/IconMap/index';
 
 interface AliCheckboxProps {
+    className?: string;
     label?: string;
     checked?: boolean;
     onChange?: (checked: boolean) => void;
@@ -27,6 +28,7 @@ interface AliCheckboxProps {
 }
 
 const AliCheckbox: React.FC<AliCheckboxProps> = ({
+    className,
     label = 'Default Label',
     checked = false,
     onChange,
@@ -47,7 +49,7 @@ const AliCheckbox: React.FC<AliCheckboxProps> = ({
 
     return (
         <CheckboxContainer>
-            <HiddenCheckbox checked={isChecked} onChange={handleCheckboxChange} />
+            <HiddenCheckbox className={className} checked={isChecked} onChange={handleCheckboxChange} />
             <StyledCheckbox
                 checked={isChecked}
                 onClick={handleCheckboxChange}
