@@ -4,9 +4,10 @@ import { CarouselContainer, CarouselSlides, CarouselSlide, CarouselArrow } from 
 interface AliCarouselProps {
     themeColor: 'blue' | 'green' | 'alert-red' | 'gray-dark' | 'purple' | 'pink' | 'yellow' | 'orange' | 'alice-blue' | 'yellow-soft' | 'yellow-bright' | 'charcoal' | 'slate' | 'onyx';
     images: string[];
+    className?: string;
 }
 
-const AliCarousel: React.FC<AliCarouselProps> = ({ themeColor, images }) => {
+const AliCarousel: React.FC<AliCarouselProps> = ({ themeColor, images, className }) => {
     const [currentIndex, setCurrentIndex] = useState(0);
 
     const handleNext = () => {
@@ -18,7 +19,7 @@ const AliCarousel: React.FC<AliCarouselProps> = ({ themeColor, images }) => {
     };
 
     return (
-        <CarouselContainer themeColor={themeColor}>
+        <CarouselContainer className={className} themeColor={themeColor}>
             <CarouselSlides style={{ transform: `translateX(-${currentIndex * 100}%)` }}>
                 {images.map((image, index) => (
                     <CarouselSlide key={index}>

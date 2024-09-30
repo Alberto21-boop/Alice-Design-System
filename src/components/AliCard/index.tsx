@@ -2,6 +2,7 @@ import React from 'react';
 import { CardContainer, CardTitle, CardContent, CardFooter } from './styles';
 
 interface AliCardProps {
+    className?: string,
     title?: string;
     content?: string;
     footer?: React.ReactNode; // Footer opcional que pode receber qualquer React Node
@@ -29,6 +30,7 @@ interface AliCardProps {
 }
 
 const AliCard: React.FC<AliCardProps> = ({
+    className,
     title,
     content,
     footer,
@@ -41,6 +43,7 @@ const AliCard: React.FC<AliCardProps> = ({
 }) => {
     return (
         <CardContainer
+            className={className}
             style={{ width, height }}
             backgroundColor={backgroundColor}
             fontColor={fontColor}
