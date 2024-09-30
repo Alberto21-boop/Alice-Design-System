@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { DatePickerContainer, DatePickerInput } from './styles';
 
 interface AliDatePickerProps {
+    className?: string;
     themeColor:
     | 'blue'
     | 'green'
@@ -20,7 +21,7 @@ interface AliDatePickerProps {
     onChange: (date: Date | null) => void;
 }
 
-const AliDatePicker: React.FC<AliDatePickerProps> = ({ themeColor, onChange }) => {
+const AliDatePicker: React.FC<AliDatePickerProps> = ({ className, themeColor, onChange }) => {
     const [selectedDate, setSelectedDate] = useState<Date | null>(null);
 
     const handleDateChange = (event: React.ChangeEvent<HTMLInputElement>) => {
@@ -32,6 +33,7 @@ const AliDatePicker: React.FC<AliDatePickerProps> = ({ themeColor, onChange }) =
     return (
         <DatePickerContainer>
             <DatePickerInput
+                className={className}
                 type="date"
                 value={selectedDate ? selectedDate.toISOString().split('T')[0] : ''}
                 onChange={handleDateChange}
