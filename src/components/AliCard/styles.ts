@@ -2,21 +2,21 @@ import styled from 'styled-components';
 
 // Mapeamento das cores para as do tema
 const backgroundColorsMap = {
-    blue: 'brand-blue',
-    green: 'brand-green',
-    'alert-red': 'brand-alert-red',
-    'gray-dark': 'brand-gray-dark',
-    purple: 'brand-purple',
-    pink: 'brand-pink',
-    yellow: 'brand-yellow',
-    orange: 'brand-orange',
-    'alice-blue': 'brand-alice-blue',
-    'yellow-soft': 'brand-yellow-soft',
-    'yellow-bright': 'brand-yellow-bright',
-    charcoal: 'brand-charcoal',
-    slate: 'brand-slate',
-    onyx: 'brand-onyx',
-    white: 'base-white', // Adicionando a cor branca ao mapeamento
+  blue: 'brand-blue',
+  green: 'brand-green',
+  'alert-red': 'brand-alert-red',
+  'gray-dark': 'brand-gray-dark',
+  purple: 'brand-purple',
+  pink: 'brand-pink',
+  yellow: 'brand-yellow',
+  orange: 'brand-orange',
+  'alice-blue': 'brand-alice-blue',
+  'yellow-soft': 'brand-yellow-soft',
+  'yellow-bright': 'brand-yellow-bright',
+  charcoal: 'brand-charcoal',
+  slate: 'brand-slate',
+  onyx: 'brand-onyx',
+  white: 'base-white', // Adicionando a cor branca ao mapeamento
 } as const;
 
 // Estilo para o CardContainer

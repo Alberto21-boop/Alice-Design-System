@@ -1,21 +1,21 @@
 import styled from 'styled-components';
 
 interface CarouselProps {
-    themeColor:
-    | 'blue'
-    | 'green'
-    | 'alert-red'
-    | 'gray-dark'
-    | 'purple'
-    | 'pink'
-    | 'yellow'
-    | 'orange'
-    | 'alice-blue'
-    | 'yellow-soft'
-    | 'yellow-bright'
-    | 'charcoal'
-    | 'slate'
-    | 'onyx';
+  themeColor:
+  | 'blue'
+  | 'green'
+  | 'alert-red'
+  | 'gray-dark'
+  | 'purple'
+  | 'pink'
+  | 'yellow'
+  | 'orange'
+  | 'alice-blue'
+  | 'yellow-soft'
+  | 'yellow-bright'
+  | 'charcoal'
+  | 'slate'
+  | 'onyx';
 }
 
 export const CarouselContainer = styled.div<CarouselProps>`
@@ -46,7 +46,7 @@ export const CarouselArrow = styled.button<CarouselProps>`
   transform: translateY(-50%);
   background-color: ${({ theme, themeColor }) => theme.colors[`brand-${themeColor}`]};
   border: none;
-  color: #fff;
+  color: ${(props => props.theme.colors['base-sideBar'])};
   cursor: pointer;
   padding: 10px;
   border-radius: 50%;
