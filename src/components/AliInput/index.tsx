@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { InputContainer, StyledInput, StyledSelect, StyledTextArea, StyledSlider, InputLabel, IconWrapper, HiddenFileInput } from './styles';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faEye, faEyeSlash, faSearch, faTrash, faChevronDown } from '@fortawesome/free-solid-svg-icons';
-import AliButton from '../AliButton/AliButton';
+import AliButton from '../AliButton';
 
 interface AliInputProps {
     label?: string;

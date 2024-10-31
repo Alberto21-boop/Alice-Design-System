@@ -1,6 +1,7 @@
 {
   "name": "alice-system",
-  "version": "0.1.0",
+  "version": "0.1.3",
+  "main": "src/index.ts",
   "private": false,
   "dependencies": {
     "@fortawesome/fontawesome-svg-core": "^6.6.0",

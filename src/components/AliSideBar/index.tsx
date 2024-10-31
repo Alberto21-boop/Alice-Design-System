@@ -3,6 +3,7 @@ import { SidebarContainer, SidebarButton, HideButton, Separator } from './styles
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faCoffee, faCheckCircle, faTimesCircle, faUser, faHome, faSearch, faBell, faEnvelope, faAngleLeft, faAngleRight } from '@fortawesome/free-solid-svg-icons';
 
+
 // Defina o tipo ThemeColorOptions, conforme o que foi usado nos estilos
 type ThemeColorOptions =
     | 'blue'
