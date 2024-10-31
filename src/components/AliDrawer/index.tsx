@@ -2,16 +2,17 @@ import React, { useState } from 'react';
 import { DrawerContainer, Overlay } from './styles';
 
 interface AliDrawerProps {
+    className?: string;
     children: React.ReactNode;
     isOpen: boolean;
     onClose: () => void;
 }
 
-const AliDrawer: React.FC<AliDrawerProps> = ({ children, isOpen, onClose }) => {
+const AliDrawer: React.FC<AliDrawerProps> = ({ className, children, isOpen, onClose }) => {
     return (
         <>
             <Overlay isOpen={isOpen} onClick={onClose} />
-            <DrawerContainer isOpen={isOpen}>
+            <DrawerContainer className={className} isOpen={isOpen}>
                 {children}
             </DrawerContainer>
         </>
