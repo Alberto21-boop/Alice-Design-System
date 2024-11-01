@@ -22,7 +22,7 @@ export { default as AliPagination } from './components/AliPagination';
 export { default as AliProgressBar } from './components/AliProgressBar';
 export { default as AliRadioButton } from './components/AliRadioButton';
 export { default as AliRanking } from './components/AliRanking';
-export { default as AliSideBar } from './components/AliSideBar';
+export { default as AliSidebar } from './components/AliSideBar';
 export { default as AliSlider } from './components/AliSlider';
 export { default as AliStepper } from './components/AliStepper';
 export { default as AliSwitch } from './components/AliSwitch';

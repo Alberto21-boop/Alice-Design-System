@@ -11,7 +11,7 @@ export default {
 const iconList = [
     { name: 'CoffeeIcon', icon: faCoffee },
     { name: 'CheckCircleIcon', icon: faCheckCircle },
-    // Adicione os demais ícones aqui...
+
 ];
 
 const Template: StoryFn<typeof FontAwesomeIcon> = (args) => <FontAwesomeIcon {...args} />;

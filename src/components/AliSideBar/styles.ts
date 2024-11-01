@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 
 // Definir as cores possíveis para o themeColor
-type ThemeColorOptions =
+export type ThemeColorOptions =
   | 'blue'
   | 'green'
   | 'alert-red'
@@ -49,7 +49,7 @@ export const SidebarButton = styled.button<{ isHidden: boolean; themeColor: Them
   transition: background-color 0.3s;
 
   &:hover {
-    background-color: ${({ theme, themeColor }) => theme.colors[`brand-${themeColor}`]};
+    background-color: ${({ theme, themeColor }) => theme.colors[`brand-${themeColor}`] || theme.colors['base-sideBar']};
     color: white;
   }
 
@@ -87,7 +87,7 @@ export const HideButton = styled.button<{ themeColor: ThemeColorOptions }>`
   transition: background-color 0.3s;
 
   &:hover {
-    background-color: ${({ theme, themeColor }) => theme.colors[`brand-${themeColor}`]};
+    background-color: ${({ theme, themeColor }) => theme.colors[`brand-${themeColor}`] || theme.colors['base-sideBar']};
     color: white;
   }
 

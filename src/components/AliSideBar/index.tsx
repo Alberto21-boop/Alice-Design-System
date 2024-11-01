@@ -1,11 +1,22 @@
 import React, { useState } from 'react';
+import PropTypes from 'prop-types';
 import { SidebarContainer, SidebarButton, HideButton, Separator } from './styles';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faCoffee, faCheckCircle, faTimesCircle, faUser, faHome, faSearch, faBell, faEnvelope, faAngleLeft, faAngleRight } from '@fortawesome/free-solid-svg-icons';
+import {
+    faCoffee,
+    faCheckCircle,
+    faTimesCircle,
+    faUser,
+    faHome,
+    faSearch,
+    faBell,
+    faEnvelope,
+    faAngleLeft,
+    faAngleRight
+} from '@fortawesome/free-solid-svg-icons';
 
-
-// Defina o tipo ThemeColorOptions, conforme o que foi usado nos estilos
-type ThemeColorOptions =
+// Tipo para definir as cores permitidas
+export type ThemeColorOptions =
     | 'blue'
     | 'green'
     | 'alert-red'
@@ -21,6 +32,7 @@ type ThemeColorOptions =
     | 'slate'
     | 'onyx';
 
+// Definindo os botões padrão do Sidebar
 const defaultButtons = [
     { icon: faCoffee, text: 'Coffee' },
     { icon: faCheckCircle, text: 'CheckCircle' },
@@ -33,13 +45,14 @@ const defaultButtons = [
 ];
 
 interface AliSidebarProps {
-    buttons?: { icon: any; text: string }[];
+    buttons: { icon: any; text: string }[]; // Removendo a possibilidade de undefined para buttons
     themeColor: ThemeColorOptions;
 }
 
 const AliSidebar: React.FC<AliSidebarProps> = ({ buttons = defaultButtons, themeColor }) => {
     const [isHidden, setIsHidden] = useState(false);
 
+    // Função para alternar a visibilidade do Sidebar
     const toggleSidebar = () => {
         setIsHidden(!isHidden);
     };
@@ -61,6 +74,32 @@ const AliSidebar: React.FC<AliSidebarProps> = ({ buttons = defaultButtons, theme
             ))}
         </SidebarContainer>
     );
+};
+
+// Define PropTypes usando uma validação customizada para themeColor
+AliSidebar.propTypes = {
+    themeColor: PropTypes.oneOf([
+        'blue',
+        'green',
+        'alert-red',
+        'gray-dark',
+        'purple',
+        'pink',
+        'yellow',
+        'orange',
+        'alice-blue',
+        'yellow-soft',
+        'yellow-bright',
+        'charcoal',
+        'slate',
+        'onyx',
+    ]).isRequired as PropTypes.Validator<ThemeColorOptions>,
+    buttons: PropTypes.arrayOf(
+        PropTypes.shape({
+            icon: PropTypes.any.isRequired,
+            text: PropTypes.string.isRequired,
+        }) as PropTypes.Validator<{ icon: any; text: string }>
+    ).isRequired, // Define buttons como array obrigatório
 };
 
 export default AliSidebar;
